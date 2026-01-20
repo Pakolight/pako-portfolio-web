@@ -1,0 +1,171 @@
+{
+  "navigation": {
+    "product": "Product",
+    "features": "Features",
+    "marketplace": "Marketplace",
+    "company": "Company",
+    "home": "Główna",
+    "services": "Usługi",
+    "techniques": "Techniki masażu",
+    "cart": "Koszyk",
+    "logout": "Wyloguj się",
+    "myOrders": "Moje zamówienia",
+    "login": "Zaloguj się",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Kompleksowa wiedza na temat jędrnej, wolnej od cellulitu skóry",
+    "description": "Technologia EndoLuxx PRO wykorzystuje szybką rotację wałków o różnych kształtach i gęstościach. Ta bezpieczna, skuteczna i holistyczna metoda masażu stymuluje skórę na wszystkich jej warstwach. Powierzchowne zastosowanie wałka powoduje tarcie, dzięki czemu zwiększamy dopływ utlenionej krwi do warstwy skórnej. Za pomocą obracających się rolek wykonywany jest głębszy masaż tkanki tłuszczowej znajdującej się w warstwie podskórnej, co zmniejsza widoczność cellulitu oraz poprawia napięcie mięśni, modelując sylwetkę.",
+    "loginButton": "Zaloguj się",
+    "imageAlt": "Zdjęcie masażu"
+  },
+  "testimonial": {
+    "experience": "Ponad dziesięć lat doświadczenia",
+    "text": "Przeszłam drogę od masażu manualnego po zaawansowane techniki masażu aparaturowego. Najważniejszą zasadą mojej pracy jest przede wszystkim nie szkodzić. Każdy masaż dopasowuję indywidualnie, troszcząc się zarówno o komfort, jak i bezpieczeństwo moich klientów. Zapraszam serdecznie do mojego gabinetu – miejsca, gdzie profesjonalizm łączy się z troską o Twoje dobre samopoczucie.",
+    "quote": "\"Z pasją do masażu i troską o Ciebie\"",
+    "therapist": "Główny masażysta – Oksana",
+    "imageAlt": "Zdjęcie masażysty"
+  },
+  "services": {
+    "title": {
+      "endoluxx": "Masaże z wykorzystaniem",
+      "endoluxxBold": "ENDOLUXX PRO",
+      "manual": "Klasyczne masaże",
+      "manualBold": "MANUALNE"
+    },
+    "description": {
+      "endoluxx": "Aparatowy masaż próżniowo-rolkowy, który wspomaga drenaż limfatyczny, redukcję cellulitu, ujędrnianie skóry, modelowanie sylwetki oraz regenerację mięśni. Bezbolesna, relaksująca metoda odpowiednia dla kobiet i mężczyzn.",
+      "manual": "Aparatowy masaż próżniowo-rolkowy, który wspomaga drenaż limfatyczny, redukcję cellulitu, ujędrnianie skóry, modelowanie sylwetki oraz regenerację mięśni. Bezbolesna, relaksująca metoda odpowiednia dla kobiet i mężczyzn."
+    },
+    "details": "Details",
+    "errors": {
+      "basketCreation": "Error creating basket",
+      "requestProcessing": "Ошибка при обработке запроса",
+      "dataFetching": "Data fetching error"
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "description": "Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt integer elementum id sem. Arcu sed malesuada et magna.",
+    "address": {
+      "label": "Address",
+      "line1": "545 Mavis Island",
+      "line2": "Chicago, IL 99191"
+    },
+    "phone": {
+      "label": "Telephone",
+      "number": "+1 (555) 234-5678"
+    },
+    "email": {
+      "label": "Email",
+      "address": "hello@example.com"
+    },
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phoneNumber": "Phone number",
+      "message": "Message",
+      "submit": "Send message"
+    }
+  },
+  "footer": {
+    "socialMedia": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X",
+      "github": "GitHub",
+      "youtube": "YouTube"
+    },
+    "copyright": "© 2024 Your Company, Inc. All rights reserved."
+  },
+  "meta": {
+    "title": "New React Router App",
+    "description": "Welcome to React Router!"
+  },
+  "popup": {
+    "addedToCart": "Produkt został dodany do koszyka!",
+    "continueOrCheckout": "Możesz kontynuować zakupy lub przejść do koszyka, aby sfinalizować zamówienie już teraz.",
+    "goToCart": "Przejdź do koszyka"
+  },
+  "checkout": {
+    "title": "Finalizacja zamówienia",
+    "summary": "Podsumowanie zamówienia",
+    "remove": "Usuń",
+    "totalDuration": "łączny czas trwania",
+    "subtotal": "Suma częściowa",
+    "discount": "Zniżka",
+    "taxes": "Podatki",
+    "total": "Razem",
+    "contactInfo": "Informacje kontaktowe",
+    "emailAddress": "Adres e-mail",
+    "phone": "Telefon",
+    "name": "Imię",
+    "appointmentDate": "Data wizyty",
+    "termsAndConditions": "Przeczytałem(-am) regulamin i wyrażam zgodę na sprzedaż moich danych osobowych najwyższemu oferentowi.",
+    "sending": "Wysyłanie...",
+    "bookOnline": "Rezerwacja online",
+    "thankYou": "Dziękujemy za złożenie rezerwacji. Skontaktujemy się z Tobą wkrótce.",
+    "validation": {
+      "required": "To pole jest wymagane",
+      "invalidEmail": "Niepoprawny adres e-mail",
+      "emailTooLong": "Adres e-mail nie może być dłuższy niż 100 znaków",
+      "phoneMinLength": "Numer telefonu musi mieć co najmniej 5 cyfr",
+      "phoneMaxLength": "Numer telefonu nie może być dłuższy niż 15 cyfr",
+      "phoneFormat": "Numer telefonu może zawierać tylko cyfry, +, spacje i myślniki",
+      "nameMinLength": "Imię musi mieć co najmniej 2 znaki",
+      "nameMaxLength": "Imię nie może być dłuższe niż 50 znaków",
+      "nameFormat": "Imię może zawierać tylko litery, spacje i myślniki",
+      "dateRequired": "Wybór daty jest wymagany",
+      "dateInPast": "Nie można wybrać daty z przeszłości"
+    },
+    "errors": {
+      "orderCreation": "Error creating order",
+      "dataLoading": "Ошибка загрузки данных",
+      "noItems": "No items in basket"
+    }
+  },
+  "about": {
+    "category": "Techniki masażu",
+    "title": "Endomasaż z wykorzystaniem Zemits Endolux PRO",
+    "description1": "W naszym salonie stawiamy na nowoczesne, sprawdzone technologie, które sprawiają, że każda procedura jest maksymalnie skuteczna, komfortowa i bezpieczna dla naszych klientów. Jednym z naszych niezawodnych narzędzi w pielęgnacji ciała i twarzy jest system Zemits Endolux PRO – innowacyjne urządzenie do głębokiego masażu i kompleksowej poprawy kondycji skóry.",
+    "description2": "Zemits Endolux PRO łączy zalety masażu manualnego z możliwościami technologii aparaturowej. Dzięki szybkobieżnemu obrotowi 3D-rolków o różnym kształcie i gęstości, urządzenie działa na głębokie warstwy skóry i tkanek, dając widoczne i trwałe efekty.",
+    "description3": "Zabieg można stosować zarówno na ciało, jak i na twarz. Jest w pełni komfortowy, nieinwazyjny i nie wymaga okresu rekonwalescencji. Świetnie sprawdza się jako samodzielna terapia, jak i w połączeniu z innymi formami masażu i pielęgnacji.",
+    "benefitsTitle": "Co daje zabieg z wykorzystaniem Zemits Endolux PRO:",
+    "benefits": {
+      "circulation": "Poprawę krążenia limfatycznego i krwi",
+      "swelling": "Redukcję obrzęków",
+      "firmness": "Ujędrnienie i napięcie skóry",
+      "cellulite": "Widoczne zmniejszenie cellulitu",
+      "recovery": "Regenerację po wysiłku fizycznym",
+      "aging": "Profilaktykę oznak starzenia się skóry"
+    },
+    "stats": {
+      "foundingYear": "Rok założenia",
+      "treatments": "Wykonanych",
+      "countries": "Kraje stosuje",
+      "investments": "Inwestycje"
+    },
+    "officialResults": "Oficjalne rezultaty po zabiegach",
+    "imageAlt": "Zdjęcie urządzenia Zemits Endolux PRO"
+  },
+  "certificates": {
+    "category": "Edukacja",
+    "title": "Profesjonalne szkolenia i certyfikaty",
+    "description": "Nasz specjalista od masażu aparaturowego ukończył oficjalne, certyfikowane szkolenia. Edukacja obejmuje indywidualne przeszkolenie z obsługi systemu Zemits Endolux PRO, a także kursy z zakresu masażu gorącymi kamieniami, masażu klasycznego oraz masażu twarzy. Każdy certyfikat potwierdza zarówno przygotowanie teoretyczne, jak i praktyczne umiejętności. Dzięki temu zapewniamy najwyższą jakość usług, bezpieczeństwo i realne efekty każdej terapii.",
+    "imageAlt": "Certyfikat szkoleniowy"
+  },
+  "orders": {
+    "title": "Twoje zamówienia",
+    "description": "Tu możesz śledzić status swojej rezerwacji, anulować rezerwację, przeglądać historię rezerwacji oraz zapisać się ponownie.",
+    "cancel": "Anuluj zamówienie",
+    "noMessage": "Brak wiadomości",
+    "addComments": "Dodaj komentarz",
+    "sendComment": "Wyślij wiadomość",
+    "duration": "łączny czas trwania",
+    "subTotal": "Suma częściowa",
+    "tax": "Podatki",
+    "total": "Razem",
+    "currentOrder": "Aktualne zamówienie"
+  }
+}

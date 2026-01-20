@@ -1,0 +1,381 @@
+{
+  "navigation": {
+    "features": "Benefits",
+    "marketplace": "Gift Cards",
+    "company": "About Us",
+    "home": "Home",
+    "cases": "Cases",
+    "aboutMe": "About me"
+  },
+  "hero": {
+    "title": "From complex processes to simple, working applications.",
+    "intro": "Full-Stack Developer (React / Django / Node.js).",
+    "description": "Hi, I’m Kostiantyn Palyvoda — a full-stack developer.\n\nI build web applications that automate real business workflows.\nI design and develop full-stack solutions for booking, payments,\ninternal tools, and integrations with external services.",
+    "casesButton": "View case",
+    "myGitHub": "My GitHub"
+  },
+  "feature": {
+    "whatIDo": "What I do?",
+    "iDo": "Turning business requirements into working systems",
+    "myApproach": "I work with companies through a structured approach — starting with analyzing existing workflows, designing the right system architecture, and then building, deploying, and maintaining reliable full-stack solutions.",
+    "titleAnalyze": "Analyze",
+    "analyze": "There is no universal solution for every problem. Before choosing technologies, I analyze business processes to identify what actually needs to be automated. This approach helps avoid unnecessary complexityand focus on efficient solutions that save time and effort.",
+    "titleDesign": "Design",
+    "design": "My design decisions are based on real constraints. I aim for architectures that are easy to understand, practical to use, and scalable without unnecessary complexity.",
+    "titleBuild": "Build",
+    "build": "I follow a “measure twice, build once” approach. Development is guided by testing, early validation, and attention to security, usability, and performance."
+  },
+  "homeContent": {
+    "partNoTech": "For non-technical readers",
+    "partTechSikled": "For technically minded readers",
+    "minTitle": "Tech stack",
+    "nonTechDescription": "I build fast, clear, and reliable web applications that help businesses work smoothly. My focus is simple: great user experience, predictable behaviour, and systems that are easy to maintain.",
+    "noTechFront": "What runs in your browser",
+    "noTechFrontSection": "<0>I</0> care a lot about <1>how an application feels for real people</1>. Slow pages, confusing interfaces, aggressive pop-ups, and meaningless banners are not “marketing” — <2>they are friction</2>. I aim for <3>clean screens</3>, <4>clear actions</4>, and a user who always understands what is happening: loading states, progress, success messages, and errors that explain what to do next.",
+    "noTechBackend": "What happens behind the scenes",
+    "backendPhilosophy": "<0>On</0> the backend, I choose <1>the approach that best fits the job</1> — not what looks fancy. For larger, long-term systems, I rely on <2>proven solutions</2> suitable for corporate-level products. For smaller and faster projects, I deliver <3>lightweight, stable, and secure systems</3> quickly. I also believe modern products should be <4>accessible internationally</4>, so I build with <5>multilingual support</5> in mind from the start.",
+    "AIAssistedSolutions": "AI-assisted solutions",
+    "noTechAISection": "<0>If</0> a task can be solved effectively with AI, I help integrate it in a <1>practical and controlled way</1>. This can include <2>AI agents for quality assurance, basic customer interactions, data analysis, or internal support workflows</2>.",
+    "serverOrientedSection": "I design and build <0>server-oriented web applications</0> with a strong focus on <1>performance</1>, <2>security</2>, and <3>clear system boundaries</3>.",
+    "techStack": "Tech stack",
+    "frontend": "Frontend",
+    "ssrPreference": "I avoid overloading the client with responsibilities that belong on the server. For this reason, I strongly prefer <0>server-side rendering (SSR)</0>, which provides faster initial load, improved security, and better SEO.",
+    "frameworkChoice": "My framework of choice is <0>React Router in a Remix-style architecture</0>. This approach significantly reduces the need for excessive <1>useEffect</1> and <2>useMemo</2>, making many typical React state management patterns unnecessary. As a result, applications become easier to reason about and maintain.",
+    "serverRuntime": "This setup allows security-sensitive operations to run on the server while staying within a single ecosystem. Regardless of the backend choice, I always operate with <0>a Node.js runtime available on the server side</0>.",
+    "formsPreference": "For forms, I prefer <0>react-hook-form</0>, focusing on minimal re-renders and early validation. Validating user input during interaction — not after submission — improves both performance and user experience.",
+    "backendIntro": "I work confidently with two backend approaches, choosing based on system scale and complexity. For enterprise-level systems with complex domain logic, I prefer <0>Django</0> for its maturity, stability, and rich ecosystem.",
+    "backendProtocols": "For internal client-facing services, I often use <0>GraphQL</0> and <1>WebSockets</1> to support live interactions. For external integrations and third-party systems, <2>REST APIs</2> remain the most practical choice.",
+    "nodeStack": "For simpler systems and faster delivery, my stack includes <0>Node.js with Express</0> and <1>Keystone</1> with GraphQL schemas. Combined with React Router v7, the entire application lives in <2>a single, cohesive ecosystem</2>, making it quick to launch and easy to maintain. Everything is built with <3>TypeScript</3>.",
+    "engineeringBackground": "Engineering background",
+    "devOpsQuality": "DevOps & quality",
+    "testingMindset": "I follow a <0>development driven by tests</0> mindset, validating assumptions early and reducing costly changes later.",
+    "ciCdStack": "For CI/CD, I prefer <0>GitHub Actions</0>. I have hands-on experience deploying and maintaining applications on <1>AWS</1>, <2>DigitalOcean</2>, and <3>Heroku</3>. Server configuration and reverse proxying are handled with <4>NGINX</4>.",
+    "engineeringBackgroundIntro": "I came to web development from <0>bot development and desktop applications</0>. I have experience building complex, multi-user bots for <1>Telegram, WhatsApp, and Viber</1>, as well as desktop applications using <2>PyQt6</2>.",
+    "engineeringBackgroundWeb": "In web development, I have extensive experience integrating <0>third-party APIs</0>, <1>payment systems</1>, and cloud services from <2>Microsoft</2> and <3>Google Cloud</3>.",
+    "aiApproach": "My approach focuses on <0>fast implementation</0>, <1>proper training</1>, and <2>fine-tuning to real business scenarios</2> — not experiments or buzzwords. AI is treated as a tool that <3>supports people and processes</3>, not replaces them blindly."
+
+  },
+
+  "medicalBot": {
+    "title": "Medical Services Platform",
+    "message": "Messenger-first patient intake & booking system",
+    "problemHeading": "Problem",
+    "problemDescription": "The client’s existing mobile application was underperforming.\nUsers were reluctant to install an app from the store, and the web version had a long and complex registration flow. A significant number of users dropped out midway and eventually chose to book appointments by calling the call center instead.",
+    "resulted" : "This resulted in:",
+    "highLoad": "High load on call center operators",
+    "delayedRequests": "Lost or delayed requests",
+    "conversion": "Low conversion from digital channels",
+    "solutionHeading": "Solution",
+    "solutionDescription": "We proposed a messenger-first approach using a Telegram bot as the primary entry point for patients.The bot was designed to handle three core call center scenarios:",
+    "liEmergencyFirst": "Emergency / first aid requests",
+    "liBooking": "Booking appointments with medical specialists",
+    "liSurgical": "Surgical consultation requests",
+    "MVPHeading": "MVP & Early Results",
+    "MVPDescription": "An MVP was launched within one week.\nThe results exceeded expectations:",
+    "LiCompletionRate": "Significantly higher completion rate compared to the web app",
+    "LiIntake": "Faster request intake",
+    "LiCallCenter": "Reduced pressure on call center staff",
+
+    "platformEvolutionTitle": "Platform Evolution",
+
+    "platformEvolutionDescription": "After validating the initial concept, the platform was redesigned with a stronger emphasis on <0>security</0>, <1>usability</1>, and <2>scalability</2>.",
+
+    "platformImprovementsHeading": "Key improvements included",
+
+    "platformImprovementUi": "a more structured and user-friendly interface",
+    "platformImprovementCalendar": "calendar-based appointment selection with real-time availability",
+    "platformImprovementCrm": "deeper integration with the Doctor ELEKS CRM",
+
+    "platformResultsHeading": "This allowed the platform to",
+
+    "platformResultPatientLookup": "retrieve patient data by phone number",
+    "platformResultAvailability": "check real-time availability of medical specialists",
+    "platformResultSelfService": "enable self-service appointment booking and cancellation",
+    "platformResultTracking": "allow patients to track test results, documents, and medical analyses",
+
+    "workflowTitle": "Operational Workflow",
+
+    "workflowDescription": "Instead of building a separate operator dashboard at an early stage, we optimized existing workflows to reduce development overhead.",
+
+    "workflowRouting": "all incoming requests were routed to private Telegram groups with operators",
+    "workflowStatuses": "request statuses were tracked and updated directly within message threads",
+    "workflowVisibility": "status changes were visible to both operators and patients",
+
+    "workflowOutcome": "This approach kept operations <0>transparent and efficient</0> while significantly reducing implementation complexity and time to market.",
+    "roadmapTitle": "Roadmap & Future Development",
+
+    "telegramLimitsIntro": "During real-world usage, we identified limitations of a pure messenger UI:",
+
+    "telegramLimitComponents": "restricted interface components",
+    "telegramLimitForms": "limited flexibility for advanced filters and forms",
+    "telegramLimitLatency": "slower response for complex interactions",
+
+    "nextStepsHeading": "Next planned steps",
+
+    "webAppHeading": "Messenger-embedded web application",
+    "webAppDescription": "A full-featured web application running inside the messenger’s internal browser.",
+    "webAppTelegramAuth": "Telegram used only for authentication and identity",
+    "webAppRichUi": "Rich UI built with modern web frameworks",
+
+    "aiHeading": "AI-assisted patient interaction",
+    "aiDescription": "The bot is extended with an AI agent capable of conducting structured conversations with patients.",
+    "aiGuidance": "Provide basic guidance and book appointments based on real availability",
+    "aiConversational": "No UI required — fully conversational flow",
+
+    "operatorHeading": "Operator workspace",
+    "operatorDescription": "A dedicated interface for operators to manage incoming requests.",
+    "operatorDrafting": "AI-powered assistance for draft responses and recommendations",
+    "operatorSeparation": "Clear separation between human decisions and AI suggestions",
+    "roadmapClosing": "The goal is not to replace medical professionals, but to <0>augment their work</0> with AI tools in a <1>controlled and transparent</1> way — especially critical in the medical domain.",
+    "valueTitle": "Value for Businesses",
+
+    "valueIntro": "This platform demonstrates how:",
+
+    "valuePointEntry": "messenger-based entry points can outperform traditional apps",
+    "valuePointAutomation": "automation can reduce call center load without sacrificing control",
+    "valuePointAi": "AI can enhance — not replace — human-driven medical workflows",
+
+    "valueAdaptIntro": "The same architecture can be adapted for:",
+
+    "valueAdaptMedical": "medical networks",
+    "valueAdaptServices": "service-based businesses",
+    "valueAdaptAppointments": "appointment-heavy industries",
+    "valueAdaptSupport": "customer support and intake systems",
+    "techStackTitle": "Technology Stack",
+
+    "techBackend": "Backend: Django, Django REST Framework",
+    "techRealtime": "Realtime: WebSockets",
+    "techFrontend": "Frontend: React Router (Remix-style architecture)",
+    "techMessaging": "Messaging: Telegram Bot API",
+    "techInfrastructure": "Infrastructure: AWS"
+  },
+  "massageStudio": {
+    "title": "Massage Therapist Portfolio & Booking Website",
+    "message": "Personal portfolio and flexible booking system for solo practitioners",
+
+    "problemSolutionTitle": "Problem & Solution",
+
+    "problemIntro": "The client is the owner of a hardware massage studio and approached me with a request to create a personal website that would present her as a professional, explain the massage technology, and help organize client bookings.",
+
+    "constraintTitle": "Key constraint",
+    "constraintText": "Simplicity was critical. The client was not comfortable with complex tools or traditional booking systems. She preferred personal communication and was already used to chatting with clients via messengers such as <0>Telegram</0> and <1>WhatsApp</1>.",
+
+    "noClassicBooking": "A classic booking system with fixed working hours and predefined availability slots was not suitable. The client did not operate on a strict schedule and preferred to adapt her availability individually for each client.",
+
+    "solutionTitle": "Solution",
+    "solutionIntro": "We designed a personal portfolio website combined with a flexible, request-based booking flow.",
+
+    "storefrontIntro": "Instead of enforcing a rigid calendar, the website works like a service-oriented storefront:",
+
+    "flowSelectService": "clients select a massage service",
+    "flowChooseWindow": "choose a preferred time window",
+    "flowCheckout": "complete a short checkout flow",
+    "flowSubmitRequest": "submit a booking request rather than an instant reservation",
+
+    "solutionOutcome": "This approach preserved personal communication while removing manual routine from the process.",
+    "mvpTitle": "MVP & Early Results",
+
+    "mvpIntro": "The MVP included the following core features:",
+
+    "mvpFeatureBlog": "A personal blog and portfolio presenting the therapist and the massage technology",
+    "mvpFeatureCatalog": "A service catalog similar to an online store, where services replace products",
+    "mvpFeatureCart": "A cart-based booking flow with service selection and a preferred time window",
+    "mvpFeatureNotifications": "Automated notifications sent to the therapist via Telegram, WhatsApp, or other messengers",
+
+    "mvpPanelIntro": "Each booking request included a link to a web-based request management panel that opened directly in the browser.",
+
+    "mvpPanelInside": "Inside this panel:",
+    "mvpPanelChat": "the therapist could chat with the client in real time via a built-in web messenger",
+    "mvpPanelDelivery": "messages were delivered instantly to the client, including email notifications with a link back to the conversation",
+    "mvpPanelClose": "once confirmed, the therapist could assign a final appointment time and close the request",
+
+    "mvpClosingIntro": "Closing a request automatically:",
+    "mvpClosingCalendar": "created an event in Google Calendar",
+    "mvpClosingDb": "stored the appointment in the application database",
+
+    "mvpSyncTitle": "Google Calendar synchronization was <0>fully bidirectional</0>:",
+    "mvpSyncDelete": "deleting an event in the calendar triggered an automatic cancellation notification to the client",
+    "mvpSyncCancel": "bookings could also be canceled directly from the panel with one click, sending an automated message",
+
+    "mvpCheckout": "During checkout, clients completed a short questionnaire with industry-standard questions and acknowledged service terms. This significantly reduced repetitive communication and preparation work for the therapist.",
+
+    "mvpSaasIntro": "The MVP also included basic SaaS-style functionality:",
+    "mvpSaasServices": "managing services",
+    "mvpSaasPromos": "creating promotional offers and bundled procedures",
+
+    "mvpLocalization": "The application was localized into <0>four languages</0>, including AI-assisted translation of dynamic content.",
+
+    "mvpOutcome": "Although the project has not yet been publicly launched, it resulted in a fully functional and reusable template for similar service-based businesses.",
+    "roadmapTitle": "Roadmap",
+
+    "roadmapIntro": "Planned next steps include:",
+
+    "roadmapCalendar": "an internal admin calendar to manage, reschedule, and cancel appointments",
+    "roadmapOperatorView": "a unified operator view to quickly switch between active requests and client conversations",
+    "roadmapNavigation": "improved navigation between booking requests and web messenger sessions",
+    "roadmapAutomation": "further automation around reminders and follow-ups",
+
+    "roadmapOutcome": "This roadmap focuses on preserving flexibility while improving operational visibility.",
+    "valueTitle": "Value for Businesses",
+
+    "valueIntro": "This project demonstrates how solo practitioners and small service businesses can:",
+
+    "valueFlexibleBooking": "offer online booking without rigid schedules",
+    "valueReduceOverhead": "reduce manual coordination and messaging overhead",
+    "valuePersonalTouch": "keep personal communication while automating routine tasks",
+    "valueAvoidComplexity": "avoid complex booking software that does not fit their workflow",
+
+    "valueAdaptIntro": "The same architecture can be easily adapted for:",
+
+    "valueMassage": "massage and wellness professionals",
+    "valueBeauty": "beauty specialists",
+    "valueTrainers": "personal trainers",
+    "valueSoloServices": "appointment-based solo services",
+    "techStackTitle": "Technology Stack",
+
+    "techFrontend": "Frontend: React Router v7",
+    "techBackend": "Backend: Node.js, Express.js",
+    "techCms": "CMS / Admin: Keystone 6",
+    "techApi": "API: GraphQL",
+    "techRealtime": "Realtime interaction: browser actions for live updates",
+    "techIntegrations": "Integrations: Google Cloud, Google Calendar"
+  },
+  "transportOps": {
+    "title": "Passenger Transportation Management System",
+    "message": "Request-driven planning & partner-based routing platform",
+    "problemSolutionTitle": "Problem & Solution",
+
+    "problemIntro": "A company operating in international passenger transportation approached me with a request to structure and automate their operations without significant upfront investment in a full-scale web platform, while keeping the system extensible for future growth.",
+
+    "modelIntro": "Their business model was non-standard. The company did not own its own bus fleet. Instead, it operated as a mediator between passengers and multiple transportation partners. Available routes were not fixed — they depended on real demand for specific directions.",
+
+    "challengesIntro": "This created several challenges:",
+
+    "challengeNoTimetable": "no classic timetable or predefined routes",
+    "challengePlanning": "difficulty planning trips based on incomplete demand",
+    "challengeDecision": "need to dynamically decide whether to operate a route internally or redirect passengers to partners",
+    "challengeManual": "heavy reliance on manual coordination",
+
+    "solutionTitle": "Solution",
+
+    "solutionIntro": "Instead of building a traditional booking website, we designed a request-driven operational system focused on internal automation and decision support.",
+
+    "systemIntro": "The system was built to:",
+
+    "systemCollect": "collect and aggregate passenger requests by direction",
+    "systemAnalyze": "analyze demand thresholds per route",
+    "systemDecide": "decide whether a route should be executed or delegated to a partner",
+    "systemFlexible": "keep the process flexible without locking the business into rigid schedules",
+
+    "closing": "The emphasis was on internal tooling first, with a clear path toward a future web interface if needed.",
+    "mvpTitle": "MVP & Early Results",
+
+    "mvpIntro": "The MVP focused on replacing manual coordination with a structured workflow.",
+
+    "capabilitiesHeading": "Key capabilities included:",
+
+    "capabilityIntake": "centralized intake of passenger requests",
+    "capabilityGrouping": "grouping and prioritization by route and date",
+    "capabilityDecision": "internal decision points for route activation or partner redirection",
+    "capabilityTracking": "clear tracking of request status and outcomes",
+
+    "resultsHeading": "This allowed the company to:",
+
+    "resultChaos": "reduce operational chaos",
+    "resultFaster": "respond faster to customer inquiries",
+    "resultDataDriven": "make routing decisions based on data rather than intuition",
+
+    "mvpOutcome": "Most importantly, the system aligned with the company’s real business model instead of forcing a classic booking structure.",
+    "roadmapTitle": "Roadmap",
+
+    "roadmapIntro": "Planned next steps for the platform include:",
+
+    "roadmapWebIntake": "a lightweight web interface for request intake",
+    "roadmapPartnerSelection": "automated partner selection based on availability and conditions",
+    "roadmapForecasting": "demand forecasting and basic analytics",
+    "roadmapTransition": "gradual transition from internal tooling to customer-facing features",
+
+    "roadmapOutcome": "This staged approach keeps costs low while allowing the system to grow alongside the business.",
+    "valueTitle": "Value for Businesses",
+
+    "valueIntro": "This project demonstrates how transportation and logistics companies can:",
+
+    "valueAssets": "build digital systems without owning physical assets",
+    "valueDemand": "operate effectively with request-based demand models",
+    "valueNoOverengineering": "avoid overengineering early-stage platforms",
+    "valueScale": "gradually scale from internal tools to customer-facing systems",
+
+    "valueAdaptIntro": "The same approach can be adapted for:",
+
+    "valuePassenger": "passenger transportation",
+    "valueLogistics": "logistics brokers",
+    "valueTours": "tour operators",
+    "valueMarketplaces": "service aggregators and marketplaces",
+    "techStackTitle": "Technology Stack",
+
+    "techBackend": "Backend: Django, Django REST Framework",
+    "techDataModel": "Data model: request-driven domain logic",
+    "techRealtime": "Realtime: WebSockets",
+    "techInfrastructure": "Infrastructure: cloud-based deployment",
+    "techArchitecture": "Architecture focus: internal-first, extensible by design"
+  },
+  "tabs":{
+    "nextPage": "Next",
+    "previousPage": "Previous"
+  },
+
+  "footer": {
+    "socialMedia": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X",
+      "github": "GitHub",
+      "youtube": "YouTube"
+    },
+    "copyright": "© 2024 Your Wellness Studio. All rights reserved."
+  },
+  "meta": {
+    "title": "Professional Anti-Cellulite & Relaxation Massage | EndoLuxx PRO Studio",
+    "description": "Book advanced anti-cellulite massage with EndoLuxx PRO or enjoy classic manual massages. Smooth skin, improved circulation, and full-body relaxation – tailored to your needs."
+  },
+
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have a question or want to book your first session? Get in touch today and start your journey towards smoother skin and deep relaxation.",
+    "address": {
+      "label": "Address",
+      "line1": "545 Mavis Island",
+      "line2": "Chicago, IL 99191"
+    },
+    "phone": {
+      "label": "Phone",
+      "number": "+1 (555) 234-5678"
+    },
+    "email": {
+      "label": "Email",
+      "address": "hello@example.com"
+    },
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phoneNumber": "Phone number",
+      "message": "Message",
+      "submit": "Send"
+    }
+  },
+    "contactForm": {
+      "title": "Let’s talk",
+      "description": "If you have a question, an idea, or a project in mind, feel free to reach out. You can use this form to describe your request related to automation, system design, or custom web solutions.\nI’ll get back to you as soon as possible.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "message": "Message / Request"
+
+  },
+  "contactMeDialog": {
+    "buttonOpen": "Get in touch",
+    "buttonSend": "Send",
+    "buttonCancel": "Cancel"
+  }
+}

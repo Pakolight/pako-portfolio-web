@@ -13,3 +13,31 @@ body {
     color-scheme: dark;
   }
 }
+
+
+
+#boxContent {
+  z-index: 1;
+  width: 278px;
+  height: 80px;
+  margin-top: 5px;
+  margin-left: -17px;
+  clip-path: polygon(7% 0%, 100% 0, 100% 100%, 0 100%);
+  border-radius: 20px 20px 20px 20px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  word-break: break-word;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+#box::before {
+  content: '';
+  position: absolute;
+  height: 90px;
+  width: 35px;
+  margin-left: -25px;
+  background: #9732CC;
+  border-radius: 20px 0px 0px 20px;
+  transform: skew(-10deg);
+}

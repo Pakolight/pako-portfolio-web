@@ -1,11 +1,20 @@
 import {
   isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
+      Links,
+      Meta,
+      Outlet,
+      Scripts,
+      ScrollRestoration,
+      useParams,
+      useNavigate
 } from "react-router";
+import "./app.css";
+import { useEffect } from "react";
+
+import {LoadingSpinner} from "~/components/shared";
+import {Navbar, Footer} from "~/components/layout ";
+
+
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -42,7 +51,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const {lang} = useParams()
+  const defaultLang = navigator.language.split('-')[0];
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!lang) {
+      setTimeout(()=>{
+        navigate(`/${defaultLang}/home`, { replace: true });
+      }, 1000)
+
+    }
+  }, [lang, defaultLang]);
+
+  return (
+
+
+      <main className="mx-auto">
+        {
+          lang?
+              <>
+                <Navbar/>
+                <Outlet/>
+                <Footer/>
+              </>
+              :
+              <div className={"flex justify-center items-center h-screen"} style={{backgroundColor: "#F5F5F5" }} >
+                <LoadingSpinner text="Welcome" />
+              </div>
+        }
+      </main>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

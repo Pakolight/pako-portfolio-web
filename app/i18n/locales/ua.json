@@ -167,5 +167,15 @@
     "tax": "Податки",
     "total": "Разом",
     "currentOrder": "Поточне замовлення"
+  },
+  "email": {
+    "contactSuccess": {
+      "subject": "Дякую - я отримав ваш запит",
+      "heading": "Я отримав ваше повідомлення",
+      "message": "Доброго дня! Дякую за звернення. Я розгляну ваш запит і зв'яжуся з вами найближчим часом.",
+      "signature": "- PaKo",
+      "brandName": "PaKo",
+      "footer": "PaKo - Full-Stack Solutions - pako.work"
+    }
   }
 }

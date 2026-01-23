@@ -1,19 +1,71 @@
 import type { Route } from "./+types/home";
 import {Hero, Feature, HomeContent} from "~/components/home";
+import {Alert} from "~/components/shared";
 import {motion} from "motion/react"
-import type { LoaderFunctionArgs, ActionFunctionArgs } from "react-router";
+import {type LoaderFunctionArgs, type ActionFunctionArgs, useActionData } from "react-router";
+import {useTranslation} from "react-i18next";
+import {ContentContainerVsGradient} from "~/components/shared";
 
-export async function action({ request }: ActionFunctionArgs) {
+export async function action({ request, params }: ActionFunctionArgs) {
     const { sendMail } = await import("../services/send-mail.server");
+    const { createContactSuccessEmail } = await import("../services/email-templates.server");
+    const { getI18n } = await import("../i18n/i18n.server");
     const formData = await request.formData();
-    const email = formData.get('email');
-    const name = formData.get('name');
-    const lastName = formData.get('last-name');
-    const message = formData.get('message');
+    const email = formData.get("email");
+    const firstName = formData.get("first-name");
+    const lastName = formData.get("last-name");
+    const formMessage = formData.get("message");
+    const lang = formData.get("lang");
     const serverMailBox = process.env.MAIL_FROM;
-    await sendMail({to: serverMailBox, subject:`New message from ${name} ${lastName}`,
-        text: `client email: ${email} \n message: ${message} \n`,} );
+    if (!serverMailBox) {
+        throw new Error("MAIL_FROM is not set");
+    }
+    const safeEmail = typeof email === "string" ? email.trim() : "";
+    const safeFirstName = typeof firstName === "string" ? firstName.trim() : "";
+    const safeLastName = typeof lastName === "string" ? lastName.trim() : "";
+    const safeMessage = typeof formMessage === "string" ? formMessage.trim() : "";
+    const safeLang = typeof lang === "string" ? lang.trim() : "";
+    const namePart = [safeFirstName, safeLastName].filter(Boolean).join(" ");
 
+    const i18n = await getI18n(safeLang);
+    const successSubject = i18n.t("email.contactSuccess.subject");
+    const successHeading = i18n.t("email.contactSuccess.heading");
+    const successMessage = i18n.t("email.contactSuccess.message");
+    const successSignature = i18n.t("email.contactSuccess.signature");
+    const successBrandName = i18n.t("email.contactSuccess.brandName");
+    const successFooter = i18n.t("email.contactSuccess.footer");
+
+    try {
+
+        await sendMail({
+            to: serverMailBox,
+            subject: namePart ? `New message from ${namePart}` : "New message from website",
+            text: `client email: ${safeEmail}\nmessage: ${safeMessage}\nlang: ${safeLang}`,
+            replyTo: safeEmail || undefined,
+        });
+
+        if (safeEmail) {
+            const { subject, html, text } = await createContactSuccessEmail({
+                subject: successSubject,
+                brandName: successBrandName,
+                heading: successHeading,
+                message: successMessage,
+                signature: successSignature,
+                footer: successFooter,
+            });
+            await sendMail({
+                to: safeEmail,
+                subject,
+                html,
+                text,
+            });
+        }
+
+        return {success: true, message: "successConnection"};
+    }catch (e){
+        console.error(e);
+        return {success: false, message: "errorConnection"}
+    }
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -29,12 +81,24 @@ export function meta({}: Route.MetaArgs) {
 
 
 export default function Home() {
+    const actionData  = useActionData() as {
+        status: boolean;
+        message: string;
+    }
+
+    const {t} =  useTranslation();
+
   return (
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}>
-
+          <div className="fixed top-16 left-0 z-10 w-full" >
+              <Alert status={actionData? actionData.status: false}
+                     alertMessage={actionData && t(`alert.${actionData && actionData.message}`)}
+                     open={!!actionData}
+              />
+          </div>
         <Hero/>
         <Feature/>
         <HomeContent/>

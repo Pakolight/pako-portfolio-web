@@ -95,5 +95,15 @@
       "message": "Сообщение",
       "submit": "Отправить"
     }
+  },
+  "email": {
+    "contactSuccess": {
+      "subject": "Спасибо - я получил ваш запрос",
+      "heading": "Я получил ваше сообщение",
+      "message": "Доброго времени суток! Спасибо за обращение. Я разберу ваш запрос и свяжусь с вами в кратчайшие сроки.",
+      "signature": "- PaKo",
+      "brandName": "PaKo",
+      "footer": "PaKo - Full-Stack Solutions - pako.work"
+    }
   }
 }

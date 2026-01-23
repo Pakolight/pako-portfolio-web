@@ -167,5 +167,15 @@
     "tax": "Podatki",
     "total": "Razem",
     "currentOrder": "Aktualne zamówienie"
+  },
+  "email": {
+    "contactSuccess": {
+      "subject": "Dziękuję - otrzymałem Twoje zapytanie",
+      "heading": "Otrzymałem Twoją wiadomość",
+      "message": "Dzień dobry! Dziękuję za wiadomość. Przeanalizuję zapytanie i odezwę się w krótkim czasie.",
+      "signature": "- PaKo",
+      "brandName": "PaKo",
+      "footer": "PaKo - Full-Stack Solutions - pako.work"
+    }
   }
 }

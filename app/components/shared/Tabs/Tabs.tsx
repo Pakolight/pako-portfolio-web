@@ -64,10 +64,10 @@ export default function Tabs({ tabs }: { tabs: Tab[] }) {
             {/* MOBILE */}
             <div
                 className={[
-                    "top-15 fixed w-screen -mx-8 px-8 flex items-center justify-between sm:hidden h-10",
-                    "transition-all duration-200",
-                    visible ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0 pointer-events-none",
-                    !isAtTop ? "backdrop-blur-md" : "",
+                    "fixed w-screen -mx-8 px-8 flex items-center justify-between sm:hidden h-10",
+                    "transition-all duration-200 transition-top ease-in-out duration-75",
+                    visible ? " translate-y-0 opacity-100" : "-translate-y-3 opacity-0 pointer-events-none",
+                    !isAtTop ? "top-0 backdrop-blur-md" : "attop top-15 top-0",
                 ].join(" ")}
             >
                 {previous ? (

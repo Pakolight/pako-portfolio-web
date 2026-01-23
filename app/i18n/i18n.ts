@@ -1,9 +1,9 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import pl from "./locales/pl.json";
-import en from "./locales/en.json";
-import ru from "./locales/ru.json";
-import ua from "./locales/ua.json";
+import pl from "~/i18n/locales/pl.json";
+import en from "~/i18n/locales/en.json";
+import ru from "~/i18n/locales/ru.json";
+import ua from "~/i18n/locales/ua.json";
 
 export const languages = ["pl", "en", "ru", "ua"];
 export const defaultLanguage = "pl";

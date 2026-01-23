@@ -18,18 +18,22 @@ import { graphClientServer } from "./graph-client.server";
 type SendMailArgs = {
     to: string;
     subject: string;
-    text: string;
+    text?: string;
+    html?: string;
     replyTo?: string;
 };
 
-export async function sendMail({ to, subject, text, replyTo }: SendMailArgs) {
+export async function sendMail({ to, subject, text, html, replyTo }: SendMailArgs) {
     const from = process.env.MAIL_FROM!;
+    if (!html && !text) {
+        throw new Error("Email content is required");
+    }
 
     const message: any = {
         subject,
         body: {
-            contentType: "Text",
-            content: text,
+            contentType: html ? "HTML" : "Text",
+            content: html ?? text ?? "",
         },
         toRecipients: [
             { emailAddress: { address: to } },

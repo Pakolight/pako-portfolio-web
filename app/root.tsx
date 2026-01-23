@@ -32,12 +32,28 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+const themeScript = `
+  (function () {
+    try {
+      var t = localStorage.getItem("theme"); // "light" | "dark" | null
+      var isDark = (t === "dark") || (t === null); // default = dark
+      var root = document.documentElement;
+      if (isDark) root.classList.add("dark");
+      else root.classList.remove("dark");
+    } catch (e) {
+      // If localStorage is unavailable, stay dark by default.
+      document.documentElement.classList.add("dark");
+    }
+  })();
+`;
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <Meta />
         <Links />
       </head>

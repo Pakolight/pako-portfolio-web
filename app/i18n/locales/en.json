@@ -55,6 +55,10 @@
     "aiApproach": "My approach focuses on <0>fast implementation</0>, <1>proper training</1>, and <2>fine-tuning to real business scenarios</2> — not experiments or buzzwords. AI is treated as a tool that <3>supports people and processes</3>, not replaces them blindly."
 
   },
+  "cases": {
+
+    "projects": "Highlighted projects"
+  },
 
   "medicalBot": {
     "title": "Medical Services Platform",
@@ -377,5 +381,19 @@
     "buttonOpen": "Get in touch",
     "buttonSend": "Send",
     "buttonCancel": "Cancel"
+  },
+  "email": {
+    "contactSuccess": {
+      "subject": "Thanks - I got your request",
+      "heading": "I've received your message",
+      "message": "Good day! Thanks for reaching out. I will review your request and get back to you shortly.",
+      "signature": "Kostiantyn Palyvoda",
+      "brandName": "PaKo",
+      "footer": "PaKo - Full-Stack Solutions - pako.work"
+    }
+  },
+  "alert": {
+    "successConnection": "Thanks for reaching out!\nYour message has been successfully sent. I’ll review it and get back to you as soon as possible.",
+    "errorConnection": "It looks like something didn’t work as expected. I can see the issue and will fix it shortly.\nIn the meantime, feel free to email me directly at kos@pako.work\n with your question or request."
   }
 }

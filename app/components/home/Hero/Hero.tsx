@@ -1,7 +1,8 @@
-
 import { useTranslation } from 'react-i18next';
 import {ContactMeDialog} from "~/components/shared";
 import {motion} from "motion/react"
+import {ContentContainerVsGradient} from "~/components/shared";
+
 
 
 export default function Hero() {

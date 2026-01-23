@@ -2,6 +2,7 @@ import {CasesGreed, CasesHero} from "app/components/cases";
 import {ContentContainerVsGradient} from "~/components/shared";
 import {motion} from "motion/react"
 import type { LoaderFunctionArgs } from "react-router";
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -10,6 +11,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 }
 
 export default function CaseHome() {
+    const {t} = useTranslation();
 
     return (
         <motion.div
@@ -17,7 +19,7 @@ export default function CaseHome() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}>
 
-            <CasesHero title={`The cases which I praud of`} description={false}/>
+            <CasesHero title={t('cases.projects')} description={false}/>
             <ContentContainerVsGradient>
                 <CasesGreed/>
             </ContentContainerVsGradient>

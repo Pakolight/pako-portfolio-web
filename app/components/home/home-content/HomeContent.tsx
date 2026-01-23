@@ -3,6 +3,8 @@ import {useState} from "react";
 import { motion } from "framer-motion";
 import {TechPart} from "./TechPart";
 import {NoTechPart} from "./NoTechPart";
+import {ContentContainerVsGradient} from "~/components/shared";
+
 
 export default function HomeContent() {
     const {t} = useTranslation();

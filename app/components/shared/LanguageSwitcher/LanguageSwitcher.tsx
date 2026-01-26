@@ -1,8 +1,5 @@
-import { useNavigate, useParams } from "react-router"
-import { motion, AnimatePresence } from "framer-motion"
+import { useLocation, useNavigate, useParams } from "react-router"
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { useLocation } from "react-router";
-
 
 interface Language {
     lang: string,
@@ -38,44 +35,47 @@ export default function LanguageSwitcher() {
             icon: "../../public/img/ru.svg"
         }
     ]
-    const styleLangIcon = "w-8 h-8 border-2 border-wight outline-1 outline-emerald-600 rounded-full z-6"
+    const styleLangIcon =
+        "size-8 shrink-0 rounded-full border-2 border-white/80 outline outline-1 outline-emerald-600/80"
 
-    const handleSelectLanguage = (lang: string) => {
-        return (navigate(lang))
+    const handleSelectLanguage = (nextLang: string) => {
+        navigate(nextLang)
     }
 
-    return(<Menu as="div" className="relative ml-3 group">
-        <div>
-            <MenuButton className="md:relative flex rounded-full bg-white text-sm focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:outline-hidden">
-                {languages.map((l, index) => (
-                    l.lang === lang && <img className={styleLangIcon} src={l.icon} alt={l.name} key={index}/>
+    return (
+        <Menu as="div" className="relative ml-3">
+            <MenuButton
+                className="flex rounded-full bg-white/90 p-0.5 text-sm  outline-indigo-500/70 outline-offset-2 transition focus-visible:outline-indigo-500 dark:bg-indigo-800/50 dark:outline-indigo-400/70"
+            >
+                {languages.map((l) => (
+                    l.lang === lang && (
+                        <img className={styleLangIcon} src={l.icon} alt={l.name} key={l.lang} />
+                    )
                 ))}
             </MenuButton>
-        </div>
-        <MenuItems>
-            <motion.div
-                initial={{ opacity: 0, transform: "translateY(-100%)" }}
-                animate={{ opacity: 1, transform: "translateY(0%)" }}
-                exit={{ opacity: 0, transform: "translateY(-100%)" }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
-                className="langugeBox flex flex-col items-center justify-center bg-white rounded-lg shadow-lg relative top-15 left-2 p-2 gap-2"
+            <MenuItems
+                className="absolute -right-3 z-20 mt-2  origin-top-right rounded-lg bg-white p-2 shadow-lg ring-1 ring-black/5 focus:outline-hidden dark:bg-indigo-800/50 dark:ring-white/10"
             >
-
-                {languages.map((l, index) => (
-                    <div className={"flex flex-row gap-1 justify-center items-center cursor-pointer"}>
-                        <img onClick={() => handleSelectLanguage(location.replace(/\w{2}/, l.lang))}
-                             className={styleLangIcon}
-                             src={l.icon} alt={l.name}
-                             key={index}
-                        />
-                        <p className="text-black block md:hidden" >{l.lang.toUpperCase()}</p>
-                    </div>
+                {languages.map((l) => (
+                    <MenuItem key={l.lang}>
+                        {({ active }) => (
+                            <button
+                                type="button"
+                                onClick={() => handleSelectLanguage(location.pathname.replace(/\w{2}/, l.lang))}
+                                className={[
+                                    "flex w-full items-center gap-2 rounded-md p-1.5 text-left text-sm transition",
+                                    active
+                                        ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
+                                        : "text-gray-700 dark:text-gray-100",
+                                ].join(" ")}
+                            >
+                                <img className={styleLangIcon} src={l.icon} alt={l.name} />
+                                <span className="block md:hidden">{l.lang.toUpperCase()}</span>
+                            </button>
+                        )}
+                    </MenuItem>
                 ))}
-            </motion.div>
-        </MenuItems>
-    </Menu>)
-
+            </MenuItems>
+        </Menu>
+    )
 }
-
-
-

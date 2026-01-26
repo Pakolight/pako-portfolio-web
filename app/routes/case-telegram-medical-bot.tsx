@@ -1,5 +1,5 @@
 import { MinusIcon,  } from '@heroicons/react/20/solid'
-import {useParams, Outlet} from "react-router";
+import {useParams, Outlet, useLocation} from "react-router";
 import {useTranslation} from "react-i18next";
 import {Tabs, ContentContainerVsGradient} from "~/components/shared";
 import {MedicalBotMermaid} from "~/components/cases";
@@ -30,6 +30,10 @@ export default function CaseTelegramMedicalBot() {
     // Any heroicon from '@heroicons/react/20/solid' will fit this type
     type IconType = ComponentType<SVGProps<SVGSVGElement>>;
     const ListIcon: IconType = MinusIcon;
+
+    const location = useLocation()
+    debugger
+    const imageTag = location.pathname.split("/").at(-1)
 
     function IconListItem({
                               icon: Icon,
@@ -75,11 +79,21 @@ export default function CaseTelegramMedicalBot() {
                     </div>
                 </div>
                 <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-                    <img
-                        alt=""
-                        src={`/public/img/medical-bot/medical-bot-${lang}.svg`}
-                        className="p-10 w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228 dark:bg-gray-800 dark:ring-white/10"
-                    />
+                    {['problem-solution', "mvp", 'values-for-business', 'techstack'].includes(imageTag) &&
+                        <img
+                            alt=""
+                            src={`/public/img/medical-bot/medical-bot-${lang}.svg`}
+                            className="p-10 w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228 dark:bg-gray-800 dark:ring-white/10"
+                        />
+                    }
+
+                    {imageTag === "roadmap" &&
+			                <img
+					                alt=""
+					                src={`/public/img/medical-bot/roadmap-${lang}.png`}
+					                className="p-10 w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228 dark:bg-gray-800 dark:ring-white/10"
+			                />
+                    }
                     {/*<MedicalBotMermaid/>*/}
                 </div>
 

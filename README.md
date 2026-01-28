@@ -1,24 +1,26 @@
-# Welcome to React Router!
+# PaKo Lending Web
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Marketing website and case studies for PaKo (full‑stack developer). Built with React Router, Tailwind CSS, and i18next, with a contact form that sends email via Microsoft Graph.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Server‑side rendering with React Router
+- Multi‑language UI (i18next)
+- Case‑study pages and marketing content
+- Contact form with email notifications (Microsoft Graph)
+- Tailwind CSS styling
+
+## Tech Stack
+
+- React 19 + React Router 7
+- Vite
+- Tailwind CSS 4
+- i18next / react-i18next
+- Microsoft Graph SDK + Azure Identity
 
 ## Getting Started
 
-### Installation
-
-Install the dependencies:
+### Install
 
 ```bash
 npm install
@@ -26,62 +28,63 @@ npm install
 
 ### Development
 
-Start the development server with HMR:
-
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The dev server runs on http://localhost:5173 by default.
 
-## Building for Production
+### Typecheck
 
-Create a production build:
+```bash
+npm run typecheck
+```
+
+### Production Build
 
 ```bash
 npm run build
+npm run start
 ```
 
-## Deployment
+## Environment Variables
 
-### Docker Deployment
-
-To build and run using Docker:
+Copy `.env.example` to `.env` in the project root:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+cp .env.example .env
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+Then fill in:
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+```bash
+MS_TENANT_ID=your-azure-tenant-id
+MS_CLIENT_ID=your-azure-client-id
+MS_CLIENT_SECRET=your-azure-client-secret
+MAIL_FROM=you@yourdomain.com
 ```
 
-## Styling
+These are required for Microsoft Graph email sending in the contact form.
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+## Project Structure
 
----
+```
+app/
+  components/         Shared UI components
+  i18n/               i18n setup and locale files
+  routes/             Route modules
+  services/           Email + Microsoft Graph integration
+public/               Static assets
+```
 
-Built with ❤️ using React Router.
+## Docker
+
+```bash
+docker build -t pako-lending-web .
+docker run -p 3000:3000 pako-lending-web
+```
+
+## Notes
+
+- Email sending uses Microsoft Graph with a configured Azure app and mailbox.
+- Translations live in `app/i18n/locales`.

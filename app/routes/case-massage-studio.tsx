@@ -44,10 +44,8 @@ export default function CaseSnowBus() {
     ]
 
     const langParam = useParams().lang;
-    let lang = "eu"
-    if (langParam) {
-        lang = langParam;
-    }
+    const lang = langParam ?? "eu";
+    const [imageLang, setImageLang] = useState(lang);
     const {t} =  useTranslation();
     const emphasis = <span className="italic font-bold" />
     // Any heroicon from '@heroicons/react/20/solid' will fit this type
@@ -86,6 +84,10 @@ export default function CaseSnowBus() {
         };
     }, []);
 
+    useEffect(() => {
+        setImageLang(lang);
+    }, [lang]);
+
     function handleImageMouseDown(event: React.MouseEvent) {
         if (event.button !== 0) {
             return;
@@ -122,7 +124,7 @@ export default function CaseSnowBus() {
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <ContentContainerVsGradient/>
             </div>
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+            <div className="lg:h-screen  mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                     <div className="lg:pr-4">
                         <div className={"absolute top-5"}>
@@ -156,7 +158,12 @@ export default function CaseSnowBus() {
                     >
                         <img
                             alt="massage-studio-chart-en"
-                            src={`/public/img/massage-studio/massage-studio-chart-${lang}.webp`}
+                            src={`/public/img/massage-studio/massage-studio-chart-${imageLang}.webp`}
+                            onError={() => {
+                                if (imageLang !== "en") {
+                                    setImageLang("en");
+                                }
+                            }}
                             className="block h-auto w-full cursor-zoom-in transition-transform duration-500 ease-out"
                             style={{
                                 transformOrigin: "70% 35%",

@@ -2,24 +2,24 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { useLocation, useNavigate, useParams, Link } from "react-router"
 
 
-const solutions = [
-    { name: 'en', description: 'English', icon: "../../public/img/en.svg" },
-    { name: 'nl', description: 'Nederlands', icon: "../../public/img/nl.svg" },
-    { name: 'pl', description: 'Polski', icon: "../../public/img/pl.svg" },
-    { name: 'ua', description: "Українська", icon: "../../public/img/ua.svg" },
-    { name: 'ru', description: 'Русский', icon: "../../public/img/ru.svg" }
-]
+
 
 
 export default function Example() {
-    // const navigate = useNavigate();
+    const solutions = [
+        { name: 'en', description: 'English', icon: "../../public/img/en.svg" },
+        { name: 'nl', description: 'Nederlands', icon: "../../public/img/nl.svg" },
+        { name: 'pl', description: 'Polski', icon: "../../public/img/pl.svg" },
+        { name: 'ua', description: "Українська", icon: "../../public/img/ua.svg" },
+        { name: 'ru', description: 'Русский', icon: "../../public/img/ru.svg" }
+    ]
     const { lang } = useParams();
     const location = useLocation();
 
     return (
         <Popover className="relative px-2">
             <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white">
-                <img className={"size-8"} src={"../../public/img/en.svg"} alt={""}></img>
+                <img className={"size-8"} src={`../../public/img/${lang}.svg`} alt={""}></img>
             </PopoverButton>
 
             <PopoverPanel

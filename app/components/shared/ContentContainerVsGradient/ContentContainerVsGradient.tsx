@@ -1,4 +1,5 @@
-import React, { useMemo, useRef } from "react"
+import { useMemo, useRef } from "react"
+import type { ReactNode } from "react"
 import {
     motion,
     useReducedMotion,
@@ -17,7 +18,7 @@ const BOTTOM_CLIP =
 export default function ContentContainerVsGradient({
     children,
 }: {
-    children: React.ReactNode
+    children: ReactNode
 }) {
     const ref = useRef<HTMLDivElement>(null)
     const prefersReducedMotion = useReducedMotion()

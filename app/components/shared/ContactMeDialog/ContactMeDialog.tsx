@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
+
 import {ContactForm} from "~/components/shared";
 import {useTranslation} from "react-i18next";
 

@@ -1,6 +1,5 @@
-import React, { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import mermaid from "mermaid";
-import { ArrowsPointingOutIcon, ArrowsPointingInIcon  } from '@heroicons/react/20/solid'
 
 type MermaidTheme =
     | "default"

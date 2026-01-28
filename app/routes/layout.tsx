@@ -1,10 +1,9 @@
 import type { Route } from "./+types/home";
-import { Outlet, useParams, useNavigate, Link, redirect} from "react-router";
-import type {LoaderFunctionArgs } from 'react-router'
+import { Outlet, useParams, useNavigate } from "react-router";
+import type { LoaderFunctionArgs } from "react-router";
 import { useEffect } from "react";
 import i18n from "../i18n/i18n"; // i18next configuration
-import {defaultLanguage, languages} from "../i18n/i18n";
-import type { LoaderFunctionArgs } from "react-router";
+import { defaultLanguage, languages } from "../i18n/i18n";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;

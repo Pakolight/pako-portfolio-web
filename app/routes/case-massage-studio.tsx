@@ -158,7 +158,7 @@ export default function CaseSnowBus() {
                     >
                         <img
                             alt="massage-studio-chart-en"
-                            src={`/public/img/massage-studio/massage-studio-chart-${imageLang}.webp`}
+                            src={`/img/massage-studio/massage-studio-chart-${imageLang}.webp`}
                             onError={() => {
                                 if (imageLang !== "en") {
                                     setImageLang("en");

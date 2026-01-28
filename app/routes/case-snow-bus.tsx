@@ -158,7 +158,7 @@ export default function CaseTelegramMedicalBot() {
                     >
                         <img
                             alt="Passenger Transportation Management System"
-                            src={`/public/img/snow-bus/snowbus-chart-${imageLang}.png`}
+                            src={`/img/snow-bus/snowbus-chart-${imageLang}.png`}
                             onError={() => {
                                 if (imageLang !== "en") {
                                     setImageLang("en");

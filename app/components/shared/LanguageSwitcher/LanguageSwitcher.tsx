@@ -7,11 +7,11 @@ import { useLocation, useNavigate, useParams, Link } from "react-router"
 
 export default function Example() {
     const solutions = [
-        { name: 'en', description: 'English', icon: "../../public/img/en.svg" },
-        { name: 'nl', description: 'Nederlands', icon: "../../public/img/nl.svg" },
-        { name: 'pl', description: 'Polski', icon: "../../public/img/pl.svg" },
-        { name: 'ua', description: "Українська", icon: "../../public/img/ua.svg" },
-        { name: 'ru', description: 'Русский', icon: "../../public/img/ru.svg" }
+        { name: 'en', description: 'English', icon: "/img/en.svg" },
+        { name: 'nl', description: 'Nederlands', icon: "/img/nl.svg" },
+        { name: 'pl', description: 'Polski', icon: "/img/pl.svg" },
+        { name: 'ua', description: "Українська", icon: "/img/ua.svg" },
+        { name: 'ru', description: 'Русский', icon: "/img/ru.svg" }
     ]
     const { lang } = useParams();
     const location = useLocation();
@@ -19,7 +19,7 @@ export default function Example() {
     return (
         <Popover className="relative px-2">
             <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white">
-                <img className={"size-8"} src={`../../public/img/${lang}.svg`} alt={""}></img>
+                <img className={"size-8"} src={`/img/${lang}.svg`} alt={""}></img>
             </PopoverButton>
 
             <PopoverPanel

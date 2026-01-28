@@ -30,7 +30,7 @@ export default function Hero() {
                                     <div className="inline-block rounded-full bg-gradient-to-bl from-indigo-500 to-purple-500 p-1 lg:hidden">
                                         <div className="size-14
                                                       rounded-full
-                                                      bg-[url('/public/img/pakoAvatar.webp')]
+                                                      bg-[url('/img/pakoAvatar.webp')]
                                                       bg-cover
                                                       bg-[position:center_20%]
                                                       ring-1 ring-black/5

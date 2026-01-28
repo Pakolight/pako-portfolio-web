@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
-import { MinusIcon,  } from '@heroicons/react/20/solid'
-import {useParams, Outlet, useLocation, Route} from "react-router";
+import { MinusIcon } from '@heroicons/react/20/solid'
+import { useParams, Outlet, useLocation } from "react-router";
 import {useTranslation} from "react-i18next";
 import {Tabs, ContentContainerVsGradient} from "~/components/shared";
 import {MedicalBotMermaid} from "~/components/cases";
@@ -55,9 +55,9 @@ export default function CaseTelegramMedicalBot() {
     const location = useLocation()
     const imageTag = location.pathname.split("/").at(-1)
     const imageSrc = imageTag === "roadmap"
-        ? `/public/img/medical-bot/roadmap-${imageLang}.png`
+        ? `/img/medical-bot/roadmap-${imageLang}.png`
         : ['problem-solution', "mvp", 'values-for-business', 'techstack'].includes(imageTag)
-            ? `/public/img/medical-bot/medical-bot-${imageLang}.svg`
+            ? `/img/medical-bot/medical-bot-${imageLang}.svg`
             : null;
 
     function IconListItem({

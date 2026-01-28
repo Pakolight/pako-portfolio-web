@@ -1,3 +1,4 @@
+import type { Route } from "./+types/home";
 import { MinusIcon,  } from '@heroicons/react/20/solid'
 import {useParams, Outlet} from "react-router";
 import {useTranslation} from "react-i18next";
@@ -9,6 +10,17 @@ import type { LoaderFunctionArgs } from "react-router";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;
+}
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Massage Therapist Portfolio & Booking Website — Case Study" },
+        {
+            name: "description",
+            content:
+                "Portfolio + flexible request-based booking with messenger communication and two-way Google Calendar sync for solo practitioners.",
+        },
+    ];
 }
 
 

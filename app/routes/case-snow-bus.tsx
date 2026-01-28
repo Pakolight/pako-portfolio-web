@@ -1,5 +1,7 @@
+import type { Route } from "./+types/home";
 import { MinusIcon,  } from '@heroicons/react/20/solid'
 import {useParams, Outlet} from "react-router";
+import {useEffect, useRef, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {Tabs, ContentContainerVsGradient} from "~/components/shared";
 import {MedicalBotMermaid} from "~/components/cases";
@@ -11,8 +13,28 @@ export async function loader({ request }: LoaderFunctionArgs) {
     return null;
 }
 
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Passenger Transportation Management System — Case Study" },
+        {
+            name: "description",
+            content:
+                "Request-driven planning platform for an international passenger operator without its own fleet—aggregating demand and routing to partners.",
+        },
+    ];
+}
+
 export default function CaseTelegramMedicalBot() {
     const {t} =  useTranslation();
+    const [isZoomed, setIsZoomed] = useState(false);
+    const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
+    const dragState = useRef({
+        isDragging: false,
+        startX: 0,
+        startY: 0,
+        originX: 0,
+        originY: 0,
+    });
     const tabs = [
         { name: t("transportOps.title"), to: 'problem-solution'},
         { name: t("transportOps.mvpTitle"), to: 'mvp'},
@@ -49,6 +71,47 @@ export default function CaseTelegramMedicalBot() {
         );
     }
 
+    useEffect(() => {
+        function handleWindowMouseUp(event: MouseEvent) {
+            if (event.button === 0) {
+                dragState.current.isDragging = false;
+            }
+        }
+
+        window.addEventListener("mouseup", handleWindowMouseUp);
+
+        return () => {
+            window.removeEventListener("mouseup", handleWindowMouseUp);
+        };
+    }, []);
+
+    function handleImageMouseDown(event: React.MouseEvent) {
+        if (event.button !== 0) {
+            return;
+        }
+
+        event.preventDefault();
+        dragState.current.isDragging = true;
+        dragState.current.startX = event.clientX;
+        dragState.current.startY = event.clientY;
+        dragState.current.originX = panOffset.x;
+        dragState.current.originY = panOffset.y;
+    }
+
+    function handleImageMouseMove(event: React.MouseEvent) {
+        if (!dragState.current.isDragging) {
+            return;
+        }
+
+        event.preventDefault();
+        const deltaX = event.clientX - dragState.current.startX;
+        const deltaY = event.clientY - dragState.current.startY;
+        setPanOffset({
+            x: dragState.current.originX + deltaX,
+            y: dragState.current.originY + deltaY,
+        });
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -75,11 +138,31 @@ export default function CaseTelegramMedicalBot() {
                     </div>
                 </div>
                 <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-                    <img
-                        alt=""
-                        src={`/public/img/medical-bot/medical-bot-${lang}.svg`}
-                        className="p-10 w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228 dark:bg-gray-800 dark:ring-white/10"
-                    />
+                    <div
+                        className="group relative w-full overflow-hidden rounded-xl dark:bg-gray-900 shadow-xl ring-1 ring-gray-400/10 dark:bg-gray-800 dark:ring-white/10 lg:mx-auto lg:w-1/2"
+                        onContextMenu={(event) => event.preventDefault()}
+                        onMouseDown={handleImageMouseDown}
+                        onMouseMove={handleImageMouseMove}
+                        onMouseLeave={() => {
+                            dragState.current.isDragging = false;
+                            setIsZoomed(false);
+                            setPanOffset({ x: 0, y: 0 });
+                        }}
+                        onMouseUp={() => {
+                            dragState.current.isDragging = false;
+                        }}
+                        onMouseEnter={() => setIsZoomed(true)}
+                    >
+                        <img
+                            alt="Passenger Transportation Management System"
+                            src={`/public/img/snow-bus/snowbus-chart-${lang}.png`}
+                            className="block h-auto w-full cursor-zoom-in transition-transform duration-500 ease-out"
+                            style={{
+                                transformOrigin: "70% 35%",
+                                transform: `translate(${panOffset.x}px, ${panOffset.y}px) scale(${isZoomed ? 1.6 : 1})`,
+                            }}
+                        />
+                    </div>
                     {/*<MedicalBotMermaid/>*/}
                 </div>
 

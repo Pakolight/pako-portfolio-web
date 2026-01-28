@@ -61,6 +61,7 @@ export default [
                 ),
                     ]
                 ),
+                route("contacts","routes/contacts.tsx" )
             ]
         ),
 

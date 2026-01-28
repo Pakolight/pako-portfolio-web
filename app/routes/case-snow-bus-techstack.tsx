@@ -1,3 +1,4 @@
+import type { Route } from "./+types/home";
 import { MinusIcon,} from '@heroicons/react/20/solid'
 import {Trans, useTranslation} from "react-i18next";
 import {motion} from "motion/react"
@@ -5,6 +6,17 @@ import type { LoaderFunctionArgs } from "react-router";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;
+}
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Passenger Transportation System — Tech Stack" },
+        {
+            name: "description",
+            content:
+                "Django, Django REST Framework, WebSockets, request-driven domain logic, and cloud deployment focused on internal tooling and extensibility.",
+        },
+    ];
 }
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>

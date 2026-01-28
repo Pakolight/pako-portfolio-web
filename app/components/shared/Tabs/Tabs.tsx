@@ -12,9 +12,9 @@ interface Tab {
 
 export default function Tabs({ tabs }: { tabs: Tab[] }) {
     const isActiveNavClass =
-        "p-2 rounded-md bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300 transition-background duration-50"
+        "rounded-md bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300 transition-background duration-50 px-3 py-2 text-sm font-medium"
     const basicNavClass =
-        "p-2 rounded-md text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-md px-3 py-2 text-sm font-medium"
+        "rounded-md text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 px-3 py-2 text-sm font-medium"
 
     const [next, setNext] = useState<Tab | null>(null)
     const [previous, setPrevious] = useState<Tab | null>(null)

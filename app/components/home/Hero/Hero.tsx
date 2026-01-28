@@ -30,7 +30,7 @@ export default function Hero() {
                                     <div className="inline-block rounded-full bg-gradient-to-bl from-indigo-500 to-purple-500 p-1 lg:hidden">
                                         <div className="size-14
                                                       rounded-full
-                                                      bg-[url('/img/pakoAvatar.JPG')]
+                                                      bg-[url('/public/img/pakoAvatar.webp')]
                                                       bg-cover
                                                       bg-[position:center_20%]
                                                       ring-1 ring-black/5
@@ -56,9 +56,9 @@ export default function Hero() {
                                 </p>
                                 <div className="mt-10 flex items-center gap-x-6">
                                     <ContactMeDialog/>
-                                    <a href="#" className="text-sm/6 font-semibold text-gray-900 dark:text-white">
-                                        {t('hero.myGitHub')} <span aria-hidden="true">→</span>
-                                    </a>
+                                    {/*<a href="https://github.com/Pakolight" className="text-sm/6 font-semibold text-gray-900 dark:text-white">*/}
+                                    {/*    {t('hero.myGitHub')} <span aria-hidden="true">→</span>*/}
+                                    {/*</a>*/}
                                 </div>
                             </div>
                         </div>
@@ -94,16 +94,16 @@ export default function Hero() {
                                     className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-indigo-100 opacity-20 inset-ring inset-ring-white md:ml-20 lg:ml-36"
                                 />
                                 <div className="hidden lg:block relative px-6 pt-8 sm:pt-16 md:pr-0 md:pl-16">
-                                    <div className={`hidden md:block  opacity-0 h-140 w-full bg-[url('/img/pako.png')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
+                                    <div className={`hidden md:block  opacity-0 h-140 w-full bg-[url('/img/pako.avif')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
                                 </div>
                             </div>
                             <div className={`absolute top-45 z-1 h-140 w-140 hidden lg:block`}>
-                                <div className={`lg:block absolute z-2  h-140 w-140 bg-[url('/img/pako.png')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
+                                <div className={`lg:block absolute z-2  h-140 w-140 bg-[url('/img/pako.avif')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
                                 <div className={"font-bold drop-shadow-xl text-l z-10 absolute top-65 left-10 text-white p-2 bg-gradient-to-l from-indigo-500 to-purple-500 lg:flex justify-center w-fit rounded-3xl border-indigo-600 _dark:outline-[#111829] border-4 outline-4 outline-indigo-400"}>Python</div>
                                 <div className={"drop-shadow-xl font-mono font-bold text-l z-30 absolute top-80 left-80 text-white p-2 bg-gradient-to-r from-indigo-500 to-purple-500 lg:flex justify-center w-fit rounded-3xl border-indigo-500 _dark:outline-[#111829] border-4 outline-4 outline-indigo-600"}>Individual solutions</div>
-                                <div className={`lg:block absolute opacity-30 z-0 hue-rotate-180 right-2 -top-2 h-140 w-140 bg-[url('/img/pako.png')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
+                                <div className={`lg:block absolute opacity-30 z-0 hue-rotate-180 right-2 -top-2 h-140 w-140 bg-[url('/img/pako.avif')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
                             </div>
-                            <div className={`hidden md:block lg:hidden absolute opacity-20 z-0 hue-rotate-180 right-2 -top-2 h-140 w-140 bg-[url('/img/pako.png')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
+                            <div className={`hidden md:block lg:hidden absolute opacity-20 z-0 hue-rotate-180 right-2 -top-2 h-140 w-140 bg-[url('/img/pako.avif')] bg-cover bg-center bg-no-repeat bg-origin-border p-3`}/>
 
                         </div>
 

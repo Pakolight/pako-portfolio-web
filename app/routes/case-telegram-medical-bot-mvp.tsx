@@ -1,3 +1,4 @@
+import type { Route } from "./+types/home";
 import { MinusIcon } from '@heroicons/react/20/solid'
 import {useParams} from "react-router";
 import {Trans, useTranslation} from "react-i18next";
@@ -7,6 +8,17 @@ import type { LoaderFunctionArgs } from "react-router";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;
+}
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Medical Services Platform — MVP & Early Results" },
+        {
+            name: "description",
+            content:
+                "MVP launched fast: streamlined onboarding via Telegram, faster request intake, and measurable reduction of manual operator work.",
+        },
+    ];
 }
 
 export default function CaseTelegramMedicalBotMVP() {

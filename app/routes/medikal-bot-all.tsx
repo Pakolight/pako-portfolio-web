@@ -1,7 +1,19 @@
+import type { Route } from "./+types/home";
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import {useParams} from "react-router";
 import {Trans, useTranslation} from "react-i18next";
 import type { ComponentType, SVGProps } from "react"
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Medical Services Platform — Case Study" },
+        {
+            name: "description",
+            content:
+                "Messenger-first intake and booking platform with CRM integration, payments, and a roadmap toward embedded web UI and AI-assisted workflows.",
+        },
+    ];
+}
 
 export default function CaseTelegramMedicalBot() {
     const langParam = useParams().lang;

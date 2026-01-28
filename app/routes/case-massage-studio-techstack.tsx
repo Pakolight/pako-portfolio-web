@@ -1,7 +1,19 @@
+import type { Route } from "./+types/home";
 import type { ComponentType, SVGProps } from "react";
 import { MinusIcon } from "@heroicons/react/20/solid";
 import { Trans, useTranslation } from "react-i18next";
 import { motion } from "motion/react";
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Massage Booking Website — Tech Stack" },
+        {
+            name: "description",
+            content:
+                "React Router v7, Node.js, Express, Keystone 6, GraphQL, live browser actions, and Google Calendar / Google Cloud integration.",
+        },
+    ];
+}
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 

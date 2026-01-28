@@ -1,3 +1,4 @@
+import type { Route } from "./+types/home";
 import { MinusIcon } from '@heroicons/react/20/solid'
 import {useParams} from "react-router";
 import {Trans, useTranslation} from "react-i18next";
@@ -7,6 +8,17 @@ import type { LoaderFunctionArgs } from "react-router";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;
+}
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Medical Services Platform — Tech Stack" },
+        {
+            name: "description",
+            content:
+                "Django, Django REST Framework, WebSockets, React Router (Remix-style), Telegram Bot API, AWS, and integrations with CRM and payments.",
+        },
+    ];
 }
 
 export default function CaseTelegramMedicalBotMVP() {

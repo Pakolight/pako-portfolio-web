@@ -1,8 +1,6 @@
-//TODO: Make the LanguageSwitcher respond to clicks and to changes of light mode
-
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
-import { NavLink, useParams } from "react-router";
+import { NavLink, useParams, Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import type { ChangeEvent } from "react";
@@ -48,7 +46,7 @@ export default function Navbar() {
   const navigation = [
     { name: t('navigation.home'), to: `/${lang}/home` },
     { name: t('navigation.cases'), to: `/${lang}/cases` },
-    { name: t('navigation.techniques'), to: `/${lang}/#` },
+    { name: t('navigation.contacts'), to: `/${lang}/contacts` },
   ]
 
   const base = "rounded-md px-3 py-2 text-sm font-medium"
@@ -74,11 +72,13 @@ export default function Navbar() {
                   </div>
                   <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex shrink-0 items-center">
-                      <img
-                          alt="Your Company"
-                          src="/img/PaKoLogo.svg"
-                          className="h-8 w-auto"
-                      />
+                      <Link to="">
+                        <img
+                            alt="Your Company"
+                            src="/img/PaKoLogo.svg"
+                            className="h-8 w-auto"
+                        />
+                      </Link>
                     </div>
                     <div className="hidden sm:ml-6 sm:block">
                       <div className="flex space-x-4">

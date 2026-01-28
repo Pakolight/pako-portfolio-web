@@ -1,3 +1,4 @@
+import type { Route } from "./+types/home";
 import { MinusIcon } from '@heroicons/react/20/solid'
 import {useParams} from "react-router";
 import {Trans, useTranslation} from "react-i18next";
@@ -7,6 +8,17 @@ import type { LoaderFunctionArgs } from "react-router";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;
+}
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Medical Services Platform — Roadmap" },
+        {
+            name: "description",
+            content:
+                "Next steps: messenger-embedded web UI, AI-assisted patient dialogue, and an operator workspace with controlled decision-making.",
+        },
+    ];
 }
 
 export default function CaseTelegramMedicalBotMVP() {

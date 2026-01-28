@@ -1,7 +1,19 @@
+import type { Route } from "./+types/home";
 import type { ComponentType, SVGProps } from "react";
 import { MinusIcon } from "@heroicons/react/20/solid";
 import { Trans, useTranslation } from "react-i18next";
 import { motion } from "motion/react";
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Massage Booking Website — Roadmap" },
+        {
+            name: "description",
+            content:
+                "Planned: internal admin calendar, faster navigation across requests, rescheduling tools, reminders, and improved operational overview.",
+        },
+    ];
+}
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 

@@ -1,11 +1,8 @@
 {
   "navigation": {
-    "features": "Benefits",
-    "marketplace": "Gift Cards",
-    "company": "About Us",
     "home": "Home",
     "cases": "Cases",
-    "aboutMe": "About me"
+    "contacts": "Contacts"
   },
   "hero": {
     "title": "From complex processes to simple, working applications.",
@@ -336,43 +333,18 @@
       "github": "GitHub",
       "youtube": "YouTube"
     },
-    "copyright": "© 2024 Your Wellness Studio. All rights reserved."
+    "copyright": "© 2026 PaKo - Full-Stack Solutions. All rights reserved."
   },
   "meta": {
     "title": "Professional Anti-Cellulite & Relaxation Massage | EndoLuxx PRO Studio",
     "description": "Book advanced anti-cellulite massage with EndoLuxx PRO or enjoy classic manual massages. Smooth skin, improved circulation, and full-body relaxation – tailored to your needs."
   },
 
-  "contact": {
-    "title": "Contact Us",
-    "description": "Have a question or want to book your first session? Get in touch today and start your journey towards smoother skin and deep relaxation.",
-    "address": {
-      "label": "Address",
-      "line1": "545 Mavis Island",
-      "line2": "Chicago, IL 99191"
-    },
-    "phone": {
-      "label": "Phone",
-      "number": "+1 (555) 234-5678"
-    },
-    "email": {
-      "label": "Email",
-      "address": "hello@example.com"
-    },
-    "form": {
-      "firstName": "First name",
-      "lastName": "Last name",
-      "email": "Email",
-      "phoneNumber": "Phone number",
-      "message": "Message",
-      "submit": "Send"
-    }
-  },
+
     "contactForm": {
       "title": "Let’s talk",
       "description": "If you have a question, an idea, or a project in mind, feel free to reach out. You can use this form to describe your request related to automation, system design, or custom web solutions.\nI’ll get back to you as soon as possible.",
-      "firstName": "First name",
-      "lastName": "Last name",
+      "fullName": "Full name",
       "email": "Email address",
       "message": "Message / Request"
 
@@ -395,5 +367,36 @@
   "alert": {
     "successConnection": "Thanks for reaching out!\nYour message has been successfully sent. I’ll review it and get back to you as soon as possible.",
     "errorConnection": "It looks like something didn’t work as expected. I can see the issue and will fix it shortly.\nIn the meantime, feel free to email me directly at kos@pako.work\n with your question or request."
+  },
+  "contactPage": {
+    "title": "How to get in touch",
+
+    "intro": "Have a question or a project in mind? Fill out the form, describe your request or challenge, and I’ll get back to you with an answer or a proposed solution.",
+
+    "formTitle": "Contact form",
+    "formDescription": "Use the form to describe your idea, automation request, or any question you may have.",
+
+    "emailTitle": "Email",
+    "emailIntro": "You can email me directly at",
+
+    "linkedinTitle": "LinkedIn",
+    "linkedinDescription": "Let’s connect and continue the conversation on",
+
+    "phoneTitle": "WhatsApp / Phone",
+    "phoneIntro": "You can call or message me via WhatsApp:"
+  },
+  "casesGrid": {
+    "medical": {
+      "title": "Medical Services Platform",
+      "description": "A healthcare service platform that streamlines emergency requests, doctor appointments, surgical consultations, patient dashboards, payments, and operator communication through a single, guided interface."
+    },
+    "massage": {
+      "title": "Massage Therapist Portfolio & Booking Website",
+      "description": "A portfolio and booking website for a solo massage therapist, combining service selection, flexible booking requests, messenger-based communication, and Google Calendar synchronization."
+    },
+    "transport": {
+      "title": "Passenger Transportation Management System",
+      "description": "A request-driven management system for international passenger transportation companies operating without their own fleet. Designed to aggregate demand, support routing decisions, and integrate partner-based operations without relying on fixed schedules."
+    }
   }
 }

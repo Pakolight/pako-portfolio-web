@@ -1,11 +1,24 @@
+import type { Route } from "./+types/home";
 import { MinusIcon,} from '@heroicons/react/20/solid'
 import {useTranslation} from "react-i18next";
 import {motion} from "motion/react"
-import type { LoaderFunctionArgs } from "react-router";
+import {type LoaderFunctionArgs, } from "react-router";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     return null;
 }
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Medical Services Platform — Problem & Solution" },
+        {
+            name: "description",
+            content:
+                "How a Telegram-first flow reduced signup friction and improved conversion by simplifying intake and automating the call-center workload.",
+        },
+    ];
+}
+
 
 export default function CaseTelegramMedicalBotProblems() {
     const {t} =  useTranslation();

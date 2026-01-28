@@ -12,8 +12,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
     const { getI18n } = await import("../i18n/i18n.server");
     const formData = await request.formData();
     const email = formData.get("email");
-    const firstName = formData.get("first-name");
-    const lastName = formData.get("last-name");
+    const fullName = formData.get("full-name");
     const formMessage = formData.get("message");
     const lang = formData.get("lang");
     const serverMailBox = process.env.MAIL_FROM;
@@ -21,11 +20,10 @@ export async function action({ request, params }: ActionFunctionArgs) {
         throw new Error("MAIL_FROM is not set");
     }
     const safeEmail = typeof email === "string" ? email.trim() : "";
-    const safeFirstName = typeof firstName === "string" ? firstName.trim() : "";
+    const safeFullName = typeof fullName === "string" ? fullName.trim() : "";
     const safeLastName = typeof lastName === "string" ? lastName.trim() : "";
     const safeMessage = typeof formMessage === "string" ? formMessage.trim() : "";
     const safeLang = typeof lang === "string" ? lang.trim() : "";
-    const namePart = [safeFirstName, safeLastName].filter(Boolean).join(" ");
 
     const i18n = await getI18n(safeLang);
     const successSubject = i18n.t("email.contactSuccess.subject");
@@ -39,7 +37,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
 
         await sendMail({
             to: serverMailBox,
-            subject: namePart ? `New message from ${namePart}` : "New message from website",
+            subject: fullName ? `New message from ${safeFullName}` : "New message from website",
             text: `client email: ${safeEmail}\nmessage: ${safeMessage}\nlang: ${safeLang}`,
             replyTo: safeEmail || undefined,
         });
@@ -73,11 +71,16 @@ export async function loader({ request }: LoaderFunctionArgs) {
 }
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+    return [
+        { title: "PAKO — Full-Stack Developer" },
+        {
+            name: "description",
+            content:
+                "Full-stack developer building fast, reliable web applications for automation, bookings, internal tools, and integrations.",
+        },
+    ];
 }
+
 
 
 export default function Home() {

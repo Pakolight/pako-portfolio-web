@@ -21,7 +21,6 @@ export async function action({ request, params }: ActionFunctionArgs) {
     }
     const safeEmail = typeof email === "string" ? email.trim() : "";
     const safeFullName = typeof fullName === "string" ? fullName.trim() : "";
-    const safeLastName = typeof lastName === "string" ? lastName.trim() : "";
     const safeMessage = typeof formMessage === "string" ? formMessage.trim() : "";
     const safeLang = typeof lang === "string" ? lang.trim() : "";
 
@@ -59,10 +58,10 @@ export async function action({ request, params }: ActionFunctionArgs) {
             });
         }
 
-        return {success: true, message: "successConnection"};
+        return {status: true, message: "successConnection"};
     }catch (e){
         console.error(e);
-        return {success: false, message: "errorConnection"}
+        return {status: false, message: "errorConnection"}
     }
 }
 
@@ -97,8 +96,8 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}>
           <div className="fixed top-16 left-0 z-10 w-full" >
-              <Alert status={actionData? actionData.status: false}
-                     alertMessage={actionData && t(`alert.${actionData && actionData.message}`)}
+              <Alert status={actionData?.status ?? false}
+                     alertMessage={actionData ? t(`alert.${actionData.message}`) : ""}
                      open={!!actionData}
               />
           </div>

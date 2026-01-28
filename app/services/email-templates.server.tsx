@@ -1,5 +1,4 @@
 import * as React from "react";
-import logo from "public/img/logoPako.png";
 import {
     Html,
     Body,

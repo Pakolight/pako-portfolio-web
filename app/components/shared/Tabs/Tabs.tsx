@@ -64,7 +64,7 @@ export default function Tabs({ tabs }: { tabs: Tab[] }) {
             {/* MOBILE */}
             <div
                 className={[
-                    "fixed  w-screen -mx-8 px-8 flex items-center justify-between sm:hidden h-10",
+                    "fixed inset-x-0 px-6 flex items-center justify-between sm:hidden h-10",
                     "transition-all duration-200 transition-top ease-in-out ",
                     visible ? " translate-y-0 opacity-100" : "-translate-y-3 opacity-0 pointer-events-none",
                     !isAtTop ? "top-0 backdrop-blur-md" : "attop top-15 top-0",

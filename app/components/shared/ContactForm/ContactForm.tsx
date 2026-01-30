@@ -4,7 +4,7 @@ import {Form, useParams} from "react-router";
 export default function ContactForm() {
     const {t} = useTranslation();
     const {lang} = useParams()
-    debugger
+
 
     return (
         <Form id={"contactMeForm"} method="post" action={`/${lang}/home`}>

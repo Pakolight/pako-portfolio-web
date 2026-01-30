@@ -37,7 +37,9 @@ export function TechPart() {
                     }}
                     className="tec flex p-px lg:col-span-5">
                     <div className="pt-8 w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 max-lg:rounded-t-4xl lg:rounded-tl-4xl dark:bg-gray-800 dark:shadow-none dark:outline-white/15">
-                        <div className="mx-2 bg-[url('/img/home-context/inBrowserMobile.png')] md:bg-[url('/img/home-context/inBrowser.png')]bg-cover h-80 bg-[position:center_-5%] md:bg-contain md:bg-no-repeat"/>
+                        <div className="mx-2 bg-[url('/img/home-context/inBrowserMobile.png')]
+                                        lg:bg-[url('/img/home-context/inBrowser.png')]
+                                        h-80 bg-[position:center_45%] bg-contain bg-no-repeat  md:bg-[position:center_40%] "/>
                         <div className="px-8">
                             <h2 className="mb-2 text-2xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">
                                 {t("homeContent.frontend")}

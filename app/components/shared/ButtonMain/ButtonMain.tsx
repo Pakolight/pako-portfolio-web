@@ -9,22 +9,24 @@ type ButtonMainProps = {
     className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const variants: Record<Variant, { wrapper: string; content: string }> = {
+const variants: Record<Variant, { wrapper: string; content: string; text: string }> = {
     slate: {
-        wrapper: "bg-gradient-to-b from-slate-700 to-slate-800",
+        wrapper: "bg-gradient-to-b from-slate-600 to-slate-700 dark:from-slate-700 dark:to-slate-800",
         content: [
-            "bg-gradient-to-b from-slate-800 to-slate-900",
-            "group-hover:from-slate-700 group-hover:to-slate-800",
-            "group-active:from-slate-700 group-active:to-slate-700",
+            "bg-gradient-to-b from-slate-700 to-slate-800 dark:from-slate-800 dark:to-slate-900",
+            "group-hover:from-slate-600 group-hover:to-slate-700 dark:group-hover:from-slate-700 dark:group-hover:to-slate-800",
+            "group-active:from-slate-600 group-active:to-slate-600 dark:group-active:from-slate-700 dark:group-active:to-slate-700",
         ].join(" "),
+        text: "text-white",
     },
     violet: {
-        wrapper: "bg-gradient-to-b from-violet-700 to-violet-900",
+        wrapper: "bg-gradient-to-b from-violet-600 to-violet-800 dark:from-violet-700 dark:to-violet-900",
         content: [
-            "bg-gradient-to-b from-violet-900 to-slate-900",
-            "group-hover:from-violet-800 group-hover:to-slate-900",
-            "group-active:from-violet-700 group-active:to-violet-900",
+            "bg-gradient-to-b from-violet-800 to-slate-800 dark:from-violet-900 dark:to-slate-900",
+            "group-hover:from-violet-700 group-hover:to-slate-800 dark:group-hover:from-violet-800 dark:group-hover:to-slate-900",
+            "group-active:from-violet-600 group-active:to-violet-800 dark:group-active:from-violet-700 dark:group-active:to-violet-900",
         ].join(" "),
+        text: "",
     },
 };
 
@@ -43,6 +45,7 @@ export default function ButtonMain({
             className={[
                 "card-wrapper group inline-flex w-fit min-h-10 select-none",
                 v.wrapper,
+                v.text,
                 "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
                 className,
             ].join(" ")}

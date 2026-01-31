@@ -45,7 +45,7 @@ export default function Contacts() {
                             <p className="border-l border-gray-200 pt-2 pl-6 text-gray-600 dark:border-white/10 dark:text-gray-400">
                                 {t("contactPage.formDescription")}
                             </p>
-                            <div className="pt-2">
+                            <div className="pt-2 pl-6">
                                 <ContactMeDialog/>
                             </div>
 

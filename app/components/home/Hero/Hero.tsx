@@ -36,6 +36,7 @@ export default function Hero() {
                                                       ring-1 ring-black/5
                                                       dark:ring-white/10"/>
                                         </div>
+
                                     </div>
                     {/*            <div className="mt-24 sm:mt-32 lg:mt-16">*/}
                     {/*                <a href="#" className="inline-flex space-x-6">*/}

@@ -1,25 +1,31 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 
 import {ContactForm} from "~/components/shared";
+import {ButtonMain} from "~/components/shared";
+
 import {useTranslation} from "react-i18next";
+
 
 // "rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
 
 export default function ContactMeDialog() {
     const [open, setOpen] = useState(false)
+    const [isFormValid, setIsFormValid] = useState(false)
     const {t} = useTranslation();
 
     return (
         <div >
-            <button
+
+            <ButtonMain
+                variant="violet"
                 onClick={() => setOpen(true)}
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
             >
                 {t("contactMeDialog.buttonOpen")}
-            </button>
+            </ButtonMain>
             <Dialog open={open} onClose={setOpen} className="relative z-10">
                 <DialogBackdrop
                     transition
@@ -34,26 +40,31 @@ export default function ContactMeDialog() {
                         >
                             <div>
                                 <div className="mt-3 text-center sm:mt-5">
-                                    <ContactForm/>
+                                    <ContactForm
+                                        onValidSubmit={() => setOpen(false)}
+                                        onValidityChange={setIsFormValid}
+                                    />
                                 </div>
                             </div>
                             <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
-                                <button
+                                <ButtonMain
+                                    variant="violet"
                                     type="submit"
                                     form={"contactMeForm"}
-                                    onClick={() => setOpen(false)}
-                                    className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2 dark:bg-indigo-500 dark:shadow-none dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
+                                    disabled={!isFormValid}
+                                    className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-50 sm:col-start-2 dark:bg-indigo-500 dark:shadow-none dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
                                 >
                                     {t("contactMeDialog.buttonSend")}
-                                </button>
-                                <button
+                                </ButtonMain>
+                                <ButtonMain
+                                    disableSpin={true}
                                     type="button"
                                     data-autofocus
                                     onClick={() => setOpen(false)}
                                     className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0 dark:bg-white/10 dark:text-white dark:shadow-none dark:inset-ring-white/5 dark:hover:bg-white/20"
                                 >
                                     {t("contactMeDialog.buttonCancel")}
-                                </button>
+                                </ButtonMain>
                             </div>
                         </DialogPanel>
                     </div>

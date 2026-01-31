@@ -95,12 +95,10 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}>
-          <div className="fixed top-16 left-0 z-10 w-full" >
-              <Alert status={actionData?.status ?? false}
-                     alertMessage={actionData ? t(`alert.${actionData.message}`) : ""}
-                     open={!!actionData}
-              />
-          </div>
+          <Alert status={actionData?.status ?? false}
+                 alertMessage={actionData ? t(`alert.${actionData.message}`) : ""}
+                 open={!!actionData}
+          />
         <Hero/>
         <Feature/>
         <HomeContent/>

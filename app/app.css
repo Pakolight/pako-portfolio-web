@@ -2,9 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
@@ -17,8 +19,6 @@ body {
   }
 }
 
-
-
 #boxContent {
   z-index: 1;
   width: 278px;
@@ -26,7 +26,7 @@ body {
   margin-top: 5px;
   margin-left: -17px;
   clip-path: polygon(7% 0%, 100% 0, 100% 100%, 0 100%);
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   box-sizing: border-box;
   padding-left: 20px;
   word-break: break-word;
@@ -35,12 +35,58 @@ body {
 }
 
 #box::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 90px;
   width: 35px;
   margin-left: -25px;
-  background: #9732CC;
-  border-radius: 20px 0px 0px 20px;
+  background: #9732cc;
+  border-radius: 20px 0 0 20px;
   transform: skew(-10deg);
+}
+
+@theme {
+  --animate-border-spin: border-spin 7s linear infinite;
+
+  @keyframes border-spin {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@layer utilities {
+  .card-wrapper {
+    @apply relative overflow-hidden rounded-2xl
+    transition-colors duration-300;
+  }
+
+  .card-wrapper::before {
+    background: conic-gradient(
+            rgba(244, 114, 182, 0.4) 0deg,
+            rgba(192, 132, 252, 0.4) 0deg,
+            transparent 80deg
+    );
+
+    @apply absolute left-1/2 top-1/2
+    h-[800%] w-[800%]
+    -translate-x-1/2 -translate-y-1/2
+    animate-border-spin
+    content-[''];
+  }
+
+  .card-content {
+    @apply absolute left-[1px] top-[1px]
+    h-[calc(100%-2px)] w-[calc(100%-2px)]
+    rounded-[inherit]
+    transition-all duration-300 ease-out;
+  }
+
+
+
+
+  .card-wrapper:active .card-content {
+    @apply bg-gradient-to-b from-slate-800 to-slate-700 transition-colors duration-50
+    scale-[1.05];
+  }
 }

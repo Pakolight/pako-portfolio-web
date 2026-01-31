@@ -397,6 +397,9 @@
     "transport": {
       "title": "Passenger Transportation Management System",
       "description": "A request-driven management system for international passenger transportation companies operating without their own fleet. Designed to aggregate demand, support routing decisions, and integrate partner-based operations without relying on fixed schedules."
+    },
+    "validation": {
+      "lang": "Invalid language"
     }
   }
 }

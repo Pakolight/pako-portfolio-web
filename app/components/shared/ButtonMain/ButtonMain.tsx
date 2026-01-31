@@ -56,8 +56,8 @@ export default function ButtonMain({
                 className={[
                     "card-content transition-all duration-300 ease-out ",
                     v.content,
-                    disableSpin && "scale-[1.05]",
-                    "group-active:scale-[1.05]",
+                    disableSpin && "scale-[1.15]",
+                    "group-active:scale-[1.15]",
                     "group-hover:duration-100 group-active:duration-50",
                 ].join(" ")}
             />

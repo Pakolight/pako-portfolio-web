@@ -57,14 +57,14 @@ body {
 
 @layer utilities {
   .card-wrapper {
-    @apply relative overflow-hidden rounded-2xl
+    @apply relative overflow-hidden rounded-md
     transition-colors duration-300;
   }
 
   .card-wrapper::before {
     background: conic-gradient(
-            rgba(244, 114, 182, 0.4) 0deg,
-            rgba(192, 132, 252, 0.4) 0deg,
+            rgba(226, 190, 255, 0.78) 0deg,
+            rgba(169, 146, 250, 0.84) 0deg,
             transparent 80deg
     );
 
@@ -76,8 +76,8 @@ body {
   }
 
   .card-content {
-    @apply absolute left-[1px] top-[1px]
-    h-[calc(100%-2px)] w-[calc(100%-2px)]
+    @apply absolute left-[2px] top-[2px]
+    h-[calc(100%-4px)] w-[calc(100%-4px)]
     rounded-[inherit]
     transition-all duration-300 ease-out;
   }

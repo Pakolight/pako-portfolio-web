@@ -50,16 +50,17 @@ const themeScript = `
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name='freelancehunt' content='02bac24215c31c8'/>
+        <script dangerouslySetInnerHTML={{__html: themeScript}}/>
+        <Meta/>
+        <Links/>
+    </head>
+    <body>
+    {children}
+    <ScrollRestoration />
         <Scripts />
       </body>
     </html>

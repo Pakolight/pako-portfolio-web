@@ -23,8 +23,8 @@ export default function Contacts() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="bg-white py-24 sm:py-32 dark:bg-gray-900 lg:h-screen">
-            <ContentContainerVsGradient>
+            className="bg-white py-24 sm:py-32 dark:bg-gray-900">
+            <ContentContainerVsGradient className="min-h-0">
                 <div className="h-fit mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0">
                         <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">

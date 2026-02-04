@@ -17,8 +17,10 @@ const BOTTOM_CLIP =
 
 export default function ContentContainerVsGradient({
     children,
+    className,
 }: {
     children: ReactNode
+    className?: string
 }) {
     const ref = useRef<HTMLDivElement>(null)
     const prefersReducedMotion = useReducedMotion()
@@ -102,7 +104,10 @@ export default function ContentContainerVsGradient({
     )
 
     return (
-        <div ref={ref} className="bg-white dark:bg-gray-900 min-h-screen">
+        <div
+            ref={ref}
+            className={`bg-white dark:bg-gray-900 min-h-screen ${className ?? ""}`}
+        >
             <div className="relative isolate px-6 pt-14 lg:px-8">
                 {/* TOP gradient shape */}
                 <motion.div

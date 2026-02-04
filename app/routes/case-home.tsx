@@ -32,12 +32,11 @@ export default function CaseHome() {
             transition={{ duration: 1, ease: "easeOut" }}>
 
             <CasesHero title={t('cases.projects')} description={false}/>
-            <ContentContainerVsGradient>
+            <ContentContainerVsGradient className="min-h-0">
                 <CasesGreed/>
             </ContentContainerVsGradient>
         </motion.div>
     )
 }
-
 
 
